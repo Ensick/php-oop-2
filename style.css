@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 100px;
+    gap: 20px;
+}
+
+img{
+    width: 100%;
+    padding: 20px;
+}
+
+
+.card{
+
+    flex-basis: calc(100% / 3 - 20px);
+    border: 1px solid lightgray;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.card h3,span,div{
+
+    padding-bottom: 10px;
+}
+
+.card div i{
+
+   padding-right: 5px;
+}
+
+span{
+
+    display: block;
+}
