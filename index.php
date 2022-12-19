@@ -48,27 +48,27 @@ $arrayProdotti = [
 
                     foreach($arrayProdotti as $prodotto){
 
-                        echo '<div>';
+                        echo '<div class="card">';
                         echo '<img src="'.$prodotto -> image.'" alt="img">';
                         echo '<h3>'.$prodotto -> name.'</h3>';
-                        echo '<span>'.$prodotto -> price.'</span>';
+                        echo '<span>'.'Prezzo '.$prodotto -> price.'</span>';
                         echo '<div>'.$prodotto -> category -> icon.$prodotto -> category -> name.'</div>';
 
                         if ($prodotto instanceof Cibo) {
 
-                            echo '<span>'.$prodotto-> peso .'</span>';
-                            echo '<span>'.$prodotto-> ingredienti .'</span>';
+                            echo '<span>'.$prodotto-> peso.'kg'.'</span>';
+                            echo '<span>'.'Ingredienti: '.$prodotto-> ingredienti .'</span>';
             
                         } elseif ($prodotto instanceof Accessori) {
             
-                            echo '<span>'.$prodotto-> materiale . '</span>';
-                            echo '<span>'.$prodotto-> dimensioni . '</span>';
+                            echo '<span>'.'Materiale: '.$prodotto-> materiale . '</span>';
+                            echo '<span>'.'Dimensioni: '.$prodotto-> dimensioni . '</span>';
             
             
                         } elseif ($prodotto instanceof Giocattoli) {
             
-                            echo '<span>'.$prodotto-> caratteristiche . '</span>';
-                            echo '<span>'.$prodotto-> dimensioni . '</span>';
+                            echo '<span>'.'Caratteristiche: '.$prodotto-> caratteristiche . '</span>';
+                            echo '<span>'.'Dimensioni: '.$prodotto-> dimensioni . '</span>';
                         }
                         echo '</div>';
 
